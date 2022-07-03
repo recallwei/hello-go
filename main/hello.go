@@ -4,7 +4,6 @@ import "fmt"
 
 func main() {
 	a, b, c := initConst()
-	d := "Unused"
 	fmt.Println(a, b, c)
 	firstName, lastName := "John", "Doe"
 	age := 32
