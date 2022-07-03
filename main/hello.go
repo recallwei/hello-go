@@ -11,7 +11,7 @@ func main() {
 
 	// declareVariable()
 	// getRuneArr("ABC")
-	getFloatMaxValue()
+	// getFloatMaxValue()
 }
 
 // variable declaration
@@ -37,7 +37,7 @@ func getRuneArr(str string) {
 	fmt.Println(rune)
 }
 
-//
+// 获取浮点数边界值
 func getFloatMaxValue() {
-	fmt.Println(math.MaxFloat32, math.MaxFloat64)
+	fmt.Println(math.MaxFloat32, math.MaxFloat64, math.SmallestNonzeroFloat32, math.SmallestNonzeroFloat64)
 }
