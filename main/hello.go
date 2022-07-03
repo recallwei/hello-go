@@ -1,13 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	//a, b, c := initConst()
 	//fmt.Println(a, b, c)
 
-	getRuneArr("ABC")
 	// declareVariable()
+	// getRuneArr("ABC")
+	getFloatMaxValue()
 }
 
 // variable declaration
@@ -31,4 +35,9 @@ func initConst() (int, int, int) {
 func getRuneArr(str string) {
 	rune := []rune(str)
 	fmt.Println(rune)
+}
+
+//
+func getFloatMaxValue() {
+	fmt.Println(math.MaxFloat32, math.MaxFloat64)
 }
