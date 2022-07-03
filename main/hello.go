@@ -6,7 +6,7 @@ func main() {
 	//a, b, c := initConst()
 	//fmt.Println(a, b, c)
 
-	getRune()
+	getRuneArr("ABC")
 	// declareVariable()
 }
 
@@ -28,7 +28,7 @@ func initConst() (int, int, int) {
 }
 
 // rune
-func getRune() {
-	rune := 'G'
+func getRuneArr(str string) {
+	rune := []rune(str)
 	fmt.Println(rune)
 }
