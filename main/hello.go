@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strconv"
 )
 
 func main() {
@@ -12,7 +13,10 @@ func main() {
 	// declareVariable()
 	// getRuneArr("ABC")
 	// getFloatBoundaryValue()
-	testEscapeCharacter()
+	// testEscapeCharacter()
+	// testDefaultValue()
+	// convertToInt32()
+	convertToInt()
 }
 
 // variable declaration
@@ -47,4 +51,28 @@ func getFloatBoundaryValue() {
 func testEscapeCharacter() {
 	fullName := "John Doe \t(alias \"Foo\")\n"
 	fmt.Println(fullName)
+}
+
+// 测试默认值
+func testDefaultValue() {
+	var defaultInt int
+	var defaultFloat32 float32
+	var defaultFloat64 float64
+	var defaultBool bool
+	var defaultString string
+	fmt.Println(defaultInt, defaultBool, defaultFloat32, defaultFloat64, defaultString)
+}
+
+// 使用内置函数转换类型
+func convertToInt32() {
+	var integer16 int16 = 127
+	var integer32 int32 = 32767
+	fmt.Println(int32(integer16) + integer32)
+}
+
+// 使用 strconv 包将 string 转化为 int
+func convertToInt() {
+	i, _ := strconv.Atoi("-42")
+	s := strconv.Itoa(-42)
+	fmt.Println(i, s)
 }
