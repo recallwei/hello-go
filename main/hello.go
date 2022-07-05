@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"os"
 	"strconv"
 )
 
@@ -16,7 +17,21 @@ func main() {
 	// testEscapeCharacter()
 	// testDefaultValue()
 	// convertToInt32()
-	convertToInt()
+	// convertToInt()
+	// printWithOrg()
+
+	// _忽略函数返回值
+	// a, _ := sumAndMul("1", "2")
+
+}
+
+// 计算两数和、乘积
+func sumAndMul(number1 string, number2 string) (sum int, mul int) {
+	int1, _ := strconv.Atoi(number1)
+	int2, _ := strconv.Atoi(number2)
+	sum = int1 + int2
+	mul = int1 * int2
+	return
 }
 
 // variable declaration
@@ -75,4 +90,11 @@ func convertToInt() {
 	i, _ := strconv.Atoi("-42")
 	s := strconv.Itoa(-42)
 	fmt.Println(i, s)
+}
+
+// 访问命令行参数使用 os.org
+func printWithOrg() {
+	number1, _ := strconv.Atoi(os.Args[1])
+	number2, _ := strconv.Atoi(os.Args[2])
+	fmt.Println("Sum:", number1+number2)
 }
