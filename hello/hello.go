@@ -1,6 +1,7 @@
 package main
 
 import (
+	"calculator"
 	"fmt"
 	"math"
 	"os"
@@ -23,11 +24,18 @@ func main() {
 	// _忽略函数返回值
 	// a, _ := sumAndMul("1", "2")
 
+	// 引用地址
+	// firstName := "Jack"
+	// changeName(&firstName)
+	// fmt.Println(firstName)
+
+	total := calculator.Sum(3, 5)
+	fmt.Println(total)
 }
 
 // 函数指针
-func changeName(name string) {
-	name = "Bruce"
+func changeName(name *string) {
+	*name = "Bruce"
 }
 
 // 计算两数和、乘积
