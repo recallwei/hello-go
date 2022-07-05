@@ -25,6 +25,11 @@ func main() {
 
 }
 
+// 函数指针
+func changeName(name string) {
+	name = "Bruce"
+}
+
 // 计算两数和、乘积
 func sumAndMul(number1 string, number2 string) (sum int, mul int) {
 	int1, _ := strconv.Atoi(number1)
